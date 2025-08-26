@@ -55,8 +55,8 @@ def change_hotel_put(
 @app.patch("/hotels/{hotel_id}")
 def change_hotel_patch(
         hotel_id: int, 
-        title: str | None = Query(), 
-        name: str | None = Query()
+        title: str | None = Query(None), 
+        name: str | None = Query(None)
 ):
     global hotels
     for hotel in hotels:
